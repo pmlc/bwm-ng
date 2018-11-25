@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: 'rentals', 
     component: RentalComponent
     children: [
-    {path: '', component:RentalListComponent},
-    {path: ':rentalid', component:RentalDetailComponent}
+      {path: '', component:RentalListComponent},
+      {path: ':rentalId', component:RentalDetailComponent}
     ]   
   }
 ]

@@ -9,7 +9,7 @@ import { Rental } from '../shared/rental.model';
 })
 export class RentalListComponent implements OnInit {
 
-  rentals: Rental[] = [];
+  rentals: Rental[] = []
   
   constructor(private rentalService: RentalService) { }
   

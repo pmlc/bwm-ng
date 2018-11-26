@@ -59,6 +59,18 @@ export class RentalService {
     createdAt: "24/12/2017"
   }];
 
+  
+  public getRentalById(rentalId: string): Observable<Rental> {
+    return new Observable<Rental>((observer) => { 
+    
+    setTimeout(() => {  
+      const foundRental = this.rentals.find((rental) => {  
+         return rental.id == rentalId;  
+      });  
+      observer.next(foundRental);
+    }, 500);
+  };
+
   public getRentals(): Observable<Rental[]> {
     const rentalObservable: Observable<Rental[]> = new Observable((observer) => {
       
@@ -74,9 +86,9 @@ export class RentalService {
         observer.complete();
       },3000);
       
-      
-      
     });
     return rentalObservable;
-  }
+  };
+
+  
 }
